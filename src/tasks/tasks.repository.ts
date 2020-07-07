@@ -41,7 +41,7 @@ export class TasksRepository extends Repository<Task> {
         }
 
         try {
-            const tasks = await query.orderBy('task.id', 'ASC').getMany();
+            const tasks = await query.orderBy('task.id', 'DESC').getMany();
             return tasks;
         }
         catch (error) {

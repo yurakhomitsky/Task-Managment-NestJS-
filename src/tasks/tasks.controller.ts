@@ -77,6 +77,7 @@ export class TasksController {
         status: TaskStatus,
         @ReqUser() user: User,
     ): Promise<Task> {
+        this.logger.verbose(`User "${user.username} patching status. Status: ${JSON.stringify(status)}, ID: ${JSON.stringify(id)}"`)
         return this.taskService.updateTaskStatus(id, status, user);
     }
 
