@@ -1,5 +1,8 @@
 {
     "db": {
         "synchronize": false
+    },
+    "server" : {
+        "origin": "some site"
     }
 }
